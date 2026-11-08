@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your next chapter in style starts with NovaShop.">
+  <title>Create your account | NovaShop</title>
+  <link rel="stylesheet" href="/ecommerce-mvc/public/assets/css/register.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="brand-panel" aria-label="Welcome to NovaShop">
+      <a class="brand" href="/ecommerce-mvc/public/store.php"><span class="brand-mark" aria-hidden="true">N</span> NovaShop</a>
+      <div class="brand-copy">
+        <span class="eyebrow">YOUR STYLE. YOUR NEXT CHAPTER.</span>
+        <h1>Good style.<br>Great beginnings.</h1>
+        <p>Everyday essentials. Unexpected favorites. A wardrobe that feels a little more like you.</p>
+        <div class="collection-line">THE EVERYDAY EDIT / VOL. 01</div>
+        <div class="brand-decoration" aria-hidden="true"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span></div>
+      </div>
+      <p class="brand-footer">© 2026 NovaShop. Wear your own story.</p>
+    </section>
+    <section class="form-panel" aria-labelledby="register-title">
+      <div class="auth-card">
+        <a class="mobile-brand" href="/ecommerce-mvc/public/store.php"><span class="brand-mark" aria-hidden="true">N</span> NovaShop</a>
+        <a class="back-link" href="/ecommerce-mvc/public/store.php">← Back to the store</a><br>
+        <span class="tag">MAKE YOURSELF AT HOME</span>
+        <h2 id="register-title">Create your account</h2>
+        <p class="intro">A fresh start for your everyday style.</p>
+        <?php if (!empty($error)): ?>
+          <p class="form-notice" role="alert"><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?></p>
+        <?php endif; ?>
+        <form id="register-form" action="/ecommerce-mvc/public/register.php" method="post">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" maxlength="150" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap"><input id="password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" minlength="8" aria-describedby="password-help" required></div>
+          </div>
+          <p class="helper" id="password-help">Use at least 8 characters for your password.</p>
+          <button class="primary-button" type="submit">Create account <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="switch">Already part of the community? <a href="/ecommerce-mvc/public/login.php">Sign in</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

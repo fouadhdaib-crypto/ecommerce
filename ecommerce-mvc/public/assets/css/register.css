@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #122a39;
+  --green: #139876;
+  --green-dark: #087b5e;
+  --text: #203340;
+  --muted: #788591;
+  --border: #e0e7e9;
+  --background: #f8faf9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--green-dark);
+  text-decoration: underline;
+}
+
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(350px, 45%) 1fr;
+}
+
+.brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 42px clamp(35px, 5vw, 90px);
+  color: white;
+  background: linear-gradient(145deg, #153847, #0d3e3b 72%, #14594e);
+}
+
+.brand {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  color: white;
+  font-family: Manrope, sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+.brand:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 11px;
+  color: white;
+  background: #2bbd96;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.brand-copy {
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2.1px;
+  font-weight: 800;
+  color: #93d5c5;
+}
+
+.brand-copy h1 {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(35px, 4vw, 64px);
+  line-height: 1.15;
+  letter-spacing: -2.5px;
+  margin: 20px 0;
+}
+
+.brand-copy p {
+  color: #bdd2d1;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 360px;
+}
+
+.brand-footer {
+  color: #9bbab7;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.orb {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid rgba(122, 221, 191, .22);
+}
+
+.orb-one {
+  width: 410px;
+  height: 410px;
+  top: -250px;
+  right: -250px;
+  background: rgba(45, 211, 153, .09);
+}
+
+.orb-two {
+  width: 230px;
+  height: 230px;
+  bottom: -230px;
+  left: -130px;
+  background: rgba(45, 211, 153, .12);
+}
+
+.orb-three {
+  width: 90px;
+  height: 90px;
+  top: 90px;
+  right: -105px;
+  background: rgba(45, 211, 153, .14);
+}
+
+.form-panel {
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+}
+
+.auth-card {
+  width: min(100%, 430px);
+}
+
+.mobile-brand {
+  display: none;
+}
+
+.tag {
+  display: inline-block;
+  background: #e5f6ee;
+  color: #087b5e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  border-radius: 30px;
+  padding: 9px 13px;
+}
+
+h2 {
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: clamp(27px, 3vw, 34px);
+  letter-spacing: -1.2px;
+  margin: 19px 0 8px;
+}
+
+.intro {
+  color: var(--muted);
+  margin: 0 0 31px;
+  font-size: 15px;
+}
+
+.field {
+  margin-bottom: 19px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  height: 51px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 0 15px;
+  background: white;
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.field input::placeholder {
+  color: #abb6be;
+}
+
+.field input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(19, 152, 118, .13);
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 2px 0 25px;
+}
+
+.check {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #526470;
+}
+
+.check input {
+  accent-color: var(--green);
+}
+
+.muted-small {
+  font-size: 12px;
+  color: #94a0a7;
+}
+
+.helper {
+  color: #8a98a1;
+  font-size: 12px;
+  margin: -3px 0 20px;
+}
+
+.primary-button {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--green);
+  color: white;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: .2s;
+}
+
+.primary-button:hover {
+  background: var(--green-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(19, 152, 118, .16);
+}
+
+.primary-button span {
+  font-size: 20px;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 29px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 780px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-panel {
+    display: none;
+  }
+
+  .form-panel {
+    padding: 40px 22px;
+    min-height: 100vh;
+  }
+
+  .mobile-brand {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-bottom: 34px;
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--navy);
+  }
+
+  .auth-card {
+    max-width: 460px;
+  }
+}.password-wrap{position:relative}.password-wrap input{padding-right:65px}.password-toggle{position:absolute;right:12px;top:0;height:51px;border:0;background:transparent;color:var(--green-dark);font:inherit;font-size:12px;font-weight:700;cursor:pointer}.password-toggle:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #2bbd96;outline-offset:3px}.form-notice{padding:13px 16px;border:1px solid #b7dfce;border-radius:10px;background:#e5f6ee;color:#155b47;font-size:13px;line-height:1.6}.form-notice[hidden]{display:none}.preview-note{text-align:center;color:#788591;font-size:11px;line-height:1.6;margin:13px 0 0}.back-link{display:inline-block;font-size:12px;margin-bottom:24px}.brand-copy .collection-line{display:flex;gap:12px;align-items:center;margin-top:35px;color:#93d5c5;font-size:10px;letter-spacing:2px}.collection-line:before{content:'';width:40px;height:1px;background:#93d5c5}.helper{line-height:1.6}.brand-copy{margin:50px 0}.form-panel{padding-top:35px;padding-bottom:35px}.intro{margin-bottom:25px}@media(max-width:780px){.mobile-brand{margin-bottom:25px}.back-link{margin-bottom:20px}}
